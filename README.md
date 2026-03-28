@@ -19,13 +19,99 @@ Abaixo constam os resumos das execuções dos comandos de segurança:
 
 > [Cole aqui o log resumido ou o número de vulnerabilidades encontradas - Deve ser ZERO]
 
+```
+[main]  INFO    profile include tests: None                                                                                                                                             
+[main]  INFO    profile exclude tests: None                                                                                                                                             
+[main]  INFO    cli include tests: None                                                                                                                                                 
+[main]  INFO    cli exclude tests: None                                                                                                                                                 
+[main]  INFO    running on Python 3.12.3                                                                                                                                                
+Run started:2026-03-28 19:01:21.970540+00:00                                                                                                                                            
+
+Test results:
+        No issues identified.
+
+Code scanned:
+        Total lines of code: 0
+        Total lines skipped (#nosec): 0
+
+Run metrics:
+        Total issues (by severity):
+                Undefined: 0
+                Low: 0
+                Medium: 0
+                High: 0
+        Total issues (by confidence):
+                Undefined: 0
+                Low: 0
+                Medium: 0
+                High: 0
+Files skipped (0):
+```
+
 *Comando: `poetry run bandit -r .`*
 
 ![Bandit output](images/bandit.png)
 
 ### 2.2. Verificação de Dependências (Safety)
 
-> [Cole aqui o log da verificação de CVEs em bibliotecas de terceiros]
+```
++=======================================================================================================================================================================================
+====+
+
+
+DEPRECATED: this command (`check`) has been DEPRECATED, and will be unsupported beyond 01 June 2024.
+
+
+We highly encourage switching to the new `scan` command which is easier to use, more powerful, and can be set up to mimic the deprecated command if required.
+
+
++=======================================================================================================================================================================================
+====+
+
++======================================================================================================================================================================================+
+
+                               /$$$$$$            /$$
+                              /$$__  $$          | $$
+           /$$$$$$$  /$$$$$$ | $$  \__//$$$$$$  /$$$$$$   /$$   /$$
+          /$$_____/ |____  $$| $$$$   /$$__  $$|_  $$_/  | $$  | $$
+         |  $$$$$$   /$$$$$$$| $$_/  | $$$$$$$$  | $$    | $$  | $$
+          \____  $$ /$$__  $$| $$    | $$_____/  | $$ /$$| $$  | $$
+          /$$$$$$$/|  $$$$$$$| $$    |  $$$$$$$  |  $$$$/|  $$$$$$$
+         |_______/  \_______/|__/     \_______/   \___/   \____  $$
+                                                          /$$  | $$
+                                                         |  $$$$$$/
+  by safetycli.com                                        \______/
+
++======================================================================================================================================================================================$
+ REPORT 
+
+  Safety v3.7.0 is scanning for Vulnerabilities...
+  Scanning dependencies in your environment:
+
+  -> /home/lucas/.cache/pypoetry/virtualenvs/eps01-lbmDnA-N-py3.12/lib/python3.12/site-packages
+
+  Using open-source vulnerability database
+  Found and scanned 49 packages
+  Timestamp 2026-03-28 16:02:11
+  0 vulnerabilities reported
+  0 vulnerabilities ignored
+
++======================================================================================================================================================================================+
+
+ No known security vulnerabilities reported. 
+
++======================================================================================================================================================================================+
+
+
++======================================================================================================================================================================================$
+DEPRECATED: this command (`check`) has been DEPRECATED, and will be unsupported beyond 01 June 2024.
+
+
+We highly encourage switching to the new `scan` command which is easier to use, more powerful, and can be set up to mimic the deprecated command if required.
+
+
++===========================================================================================================================================================================================+
+```
 
 *Comando: `poetry run safety check`*
 
@@ -33,7 +119,9 @@ Abaixo constam os resumos das execuções dos comandos de segurança:
 
 ### 2.3. Qualidade e Conformidade (Ruff)
 
-> [Cole o log do linter e formatter]
+```
+All checks passed!
+```
 
 *Comando: `poetry run ruff check .`*
 
